@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
+from sklearn.metrics import average_precision_score, recall_score, precision_recall_curve
 
 
 # ignore warning
@@ -98,3 +99,12 @@ y_pred = cross_val_predict(clf, X_train, y_train,cv=5)
 conf_mat = confusion_matrix(y_train,y_pred)
 print('Cross validation confisuion matrix wiht cv = 5')
 print(conf_mat)
+
+# Plot precision recall curve
+y_scores = dt.predict_proba(X_test)[:, 1]
+precision, recall, thresholds = precision_recall_curve(y_test, y_scores)
+plt.plot(recall, precision, marker='.')
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.title('Precision-Recall Curve')
+plt.show()

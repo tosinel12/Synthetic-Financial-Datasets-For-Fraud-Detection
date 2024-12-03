@@ -41,3 +41,17 @@ isFraud - This is the transactions made by the fraudulent agents inside the simu
 
 isFlaggedFraud - The business model aims to control massive transfers from one account to another and flags illegal attempts. An illegal attempt in this dataset is an attempt to transfer more than 200.000 in a single transaction.
 
+# Precision-Recall Curve
+The precision-recall curve is a useful tool for evaluating the performance of binary classifiers, especially when dealing with imbalanced datasets. It shows the trade-off between precision and recall for different threshold values.
+
+The precision-recall curve for the algorithms implemented in this project can be found in the respective Jupyter Notebook files:
+
+- `decisiontree_withCV5.ipynb`
+- `dt_CASHOUT.ipynb`
+- `dt.ipynb`
+- `GBDT-cashout.ipynb`
+- `GBDT.ipynb`
+- `XGB-CASHOUT.ipynb`
+- `XGB.ipynb`
+
+These notebooks contain the code to plot the precision-recall curve for each algorithm, providing a visual representation of their performance.
